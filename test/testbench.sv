@@ -1,5 +1,3 @@
-`timescale 1ns/1ps
-
 module tb_alu;
 	reg[15:0] A,B;
 	reg[3:0] ALU_Sel;
@@ -7,7 +5,7 @@ module tb_alu;
 	wire[15:0] ALU_Out;
 	wire Carryout;
 	integer i;
-	alu unidad_testeo(
+	alu test_unit(
 		A,B,
 		ALU_Sel,
 		ALU_Out,
@@ -24,8 +22,8 @@ module tb_alu;
 			#10;
 		end;
 
-		A=16'hF6
-		B=16'h0A
+		A=16'hF6;
+		B=16'h0A;
 
 	end // initial
 	endmodule // tb_alu
